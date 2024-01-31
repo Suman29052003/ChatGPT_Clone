@@ -119,58 +119,77 @@
   color: green !important;
 }
 
-.rightSide {
-  width: 77%;
+.rightSide{
   height: 100vh;
-  background-color: #343541;
+  width: calc(100% - 23%);
+  height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem 8rem;
 }
 
-.rightHeading {
-  width: 9rem;
-  margin: 10px;
+.chatFooter{
+  margin-top: auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
-.rightHeading h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-}
-
-.rightHeading span {
-  color: gray;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-}
-
-.chatArea {
+.chatFooter .input{
   display: flex;
-  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: #000000;
+  border-radius: 8px;
 }
 
-.userInputBox {
+.chatFooter .input input{
+width: 100%;
+padding: 10px;
+}
+
+.input> input ,.send{
+  border: none;
+  background: transparent;
+  outline: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.footerText{
+  padding: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+.chats{
+  display: flex;
+  flex-direction: column;
+}
+
+.chat{
   display: flex;
   width: 100%;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.chatArea .userInputBox input {
-  width: 50%;
-  height: 3rem;
-  border-radius: 8px;
-  border: 2px solid white;
-  outline: 0;
-  padding: 5px;
-  font-size: 14px;
-  background: transparent;
-  color: white;
-}
-
-.userInputBox input::placeholder {
-  font-size: 14px;
-  padding: 5px;
+  text-align: justify;
+  align-items: center;
   margin: 10px;
+  gap: 18px;
+}
+
+.chat img{
+  height: auto;
+  width: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.bot{
+  background-color: aquamarine;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 10px;
 }
